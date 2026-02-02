@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-bar">
+    <div class="app-title">Art Gallery</div>
+    <div class="collection-buttons">
+      <button onclick="scrollToCollection('Nature')">Nature</button>
+      <button onclick="scrollToCollection('Animals')">Animals</button>
+      <button onclick="scrollToCollection('Seaview')">Seaview</button>
+      <button onclick="scrollToCollection('Mountains')">Mountains</button>
+      <button onclick="scrollToCollection('Cars')">Cars</button>
+      <button onclick="scrollToCollection('Painting')">Painting</button>
+    </div>
+    <button class="fav-btn" onclick="showFavorites()">My Favorites</button>
+  </div>
+  <div class="gallery">
+    <div class="collection" id="Nature">
+      <h2>Nature</h2>
+      <div class="image-scroll">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature 1" onclick="showDescription('Forest view with trees and sunlight.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 2" onclick="showDescription('Mountain landscape with clear sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Nature 3" onclick="showDescription('River flowing through green forest.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Nature 4" onclick="showDescription('Sunset over hills and trees.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Nature 5" onclick="showDescription('Peaceful lake surrounded by forest.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80" alt="Nature 6" onclick="showDescription('Wildflowers blooming in a meadow.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 7" onclick="showDescription('Mountain landscape with clear sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature 8" onclick="showDescription('Forest view with trees and sunlight.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Nature 9" onclick="showDescription('River flowing through green forest.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Nature 10" onclick="showDescription('Sunset over hills and trees.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection" id="Animals">
+      <h2>Animals</h2>
+      <div class="image-scroll">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Animal 1" onclick="showDescription('Dog running in a field.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Animal 2" onclick="showDescription('Cat sitting on a window.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=400&q=80" alt="Animal 3" onclick="showDescription('Horse grazing in a meadow.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Animal 4" onclick="showDescription('Elephant walking in the wild.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Animal 5" onclick="showDescription('Bird perched on a branch.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Animal 6" onclick="showDescription('Dog running in a field.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Animal 7" onclick="showDescription('Cat sitting on a window.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=400&q=80" alt="Animal 8" onclick="showDescription('Horse grazing in a meadow.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Animal 9" onclick="showDescription('Elephant walking in the wild.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Animal 10" onclick="showDescription('Bird perched on a branch.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection" id="Seaview">
+      <h2>Seaview</h2>
+      <div class="image-scroll">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Seaview 1" onclick="showDescription('Blue sea with waves and sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Seaview 2" onclick="showDescription('Seaside rocks and water.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Seaview 3" onclick="showDescription('Calm ocean at sunset.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Seaview 4" onclick="showDescription('Blue sea with waves and sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Seaview 5" onclick="showDescription('Seaside rocks and water.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Seaview 6" onclick="showDescription('Calm ocean at sunset.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&q=80" alt="Seaview 7" onclick="showDescription('Blue sea with waves and sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Seaview 8" onclick="showDescription('Seaside rocks and water.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Seaview 9" onclick="showDescription('Calm ocean at sunset.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Seaview 10" onclick="showDescription('Blue sea with waves and sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection" id="Mountains">
+      <h2>Mountains</h2>
+      <div class="image-scroll">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Mountain 1" onclick="showDescription('Snowy mountain peak under blue sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Mountain 2" onclick="showDescription('Mountain range with clouds.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Mountain 3" onclick="showDescription('Green valley between mountains.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mountain 4" onclick="showDescription('Snowy mountain peak under blue sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Mountain 5" onclick="showDescription('Mountain range with clouds.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80" alt="Mountain 6" onclick="showDescription('Green valley between mountains.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1464820453369-31d2c0b651af?auto=format&fit=crop&w=400&q=80" alt="Mountain 7" onclick="showDescription('Snowy mountain peak under blue sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Mountain 8" onclick="showDescription('Mountain range with clouds.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Mountain 9" onclick="showDescription('Green valley between mountains.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Mountain 10" onclick="showDescription('Snowy mountain peak under blue sky.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection" id="Cars">
+      <h2>Cars</h2>
+      <div class="image-scroll">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=400&q=80" alt="Car 1" onclick="showDescription('Red sports car on the road.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Car 2" onclick="showDescription('Classic car parked in city.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Car 3" onclick="showDescription('Luxury car in the showroom.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Car 4" onclick="showDescription('Red sports car on the road.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Car 5" onclick="showDescription('Classic car parked in city.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Car 6" onclick="showDescription('Luxury car in the showroom.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=400&q=80" alt="Car 7" onclick="showDescription('Red sports car on the road.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Car 8" onclick="showDescription('Classic car parked in city.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Car 9" onclick="showDescription('Luxury car in the showroom.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Car 10" onclick="showDescription('Red sports car on the road.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection" id="Painting">
+      <h2>Painting</h2>
+      <div class="image-scroll">
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Painting 1" onclick="showDescription('Abstract painting with vibrant colors.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Painting 2" onclick="showDescription('Landscape painting of mountains.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Painting 3" onclick="showDescription('Portrait painting of a woman.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Painting 4" onclick="showDescription('Still life painting with fruits.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Painting 5" onclick="showDescription('Abstract painting with vibrant colors.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Painting 6" onclick="showDescription('Landscape painting of mountains.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Painting 7" onclick="showDescription('Portrait painting of a woman.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?auto=format&fit=crop&w=400&q=80" alt="Painting 8" onclick="showDescription('Still life painting with fruits.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=400&q=80" alt="Painting 9" onclick="showDescription('Abstract painting with vibrant colors.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+        <div class="image-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Painting 10" onclick="showDescription('Landscape painting of mountains.')">
+          <div class="img-icons">
+            <span class="rating">
+              <span onclick="rate(this,1)">&#9733;</span>
+              <span onclick="rate(this,2)">&#9733;</span>
+              <span onclick="rate(this,3)">&#9733;</span>
+              <span onclick="rate(this,4)">&#9733;</span>
+              <span onclick="rate(this,5)">&#9733;</span>
+            </span>
+            <span class="fav-icon" onclick="toggleFav(this)">&#9825;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="favorites-modal" class="favorites-modal">
+    <div class="favorites-content">
+      <span class="close" onclick="closeFavorites()">&times;</span>
+      <h2>My Favorite Images</h2>
+      <div id="favorites-list" class="favorites-list"></div>
+    </div>
+  </div>
+  <div id="desc-modal" class="desc-modal">
+    <div class="desc-content">
+      <span class="close" onclick="closeDescription()">&times;</span>
+      <h2>Image Description</h2>
+      <div id="desc-text"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function scrollToCollection(name) {
+      var el = document.getElementById(name);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    function showFavorites() {
+      var modal = document.getElementById('favorites-modal');
+      var list = document.getElementById('favorites-list');
+      list.innerHTML = '';
+      var favs = JSON.parse(localStorage.getItem('favorites') || '[]');
+      if (favs.length === 0) {
+        list.innerHTML = '<p>No favorite images yet.</p>';
+      } else {
+        favs.forEach(function(src) {
+          var img = document.createElement('img');
+          img.src = src;
+          img.className = 'fav-img';
+          list.appendChild(img);
+        });
+      }
+      modal.style.display = 'block';
+    }
+    function closeFavorites() {
+      document.getElementById('favorites-modal').style.display = 'none';
+    }
+    function showDescription(desc) {
+      var modal = document.getElementById('desc-modal');
+      var text = document.getElementById('desc-text');
+      text.textContent = desc;
+      modal.style.display = 'block';
+    }
+    function closeDescription() {
+      document.getElementById('desc-modal').style.display = 'none';
+    }
+    window.onclick = function(event) {
+      var favModal = document.getElementById('favorites-modal');
+      var descModal = document.getElementById('desc-modal');
+      if (event.target == favModal) {
+        favModal.style.display = 'none';
+      }
+      if (event.target == descModal) {
+        descModal.style.display = 'none';
+      }
+    }
+    // Show footer only when scrolling down
+    window.addEventListener('scroll', function() {
+      const footer = document.getElementById('main-footer');
+      if (window.scrollY > 50) {
+        footer.style.display = 'block';
+      } else {
+        footer.style.display = 'none';
+      }
+    });
+  </script>
+
+  <footer id="main-footer" style="width:100%;text-align:center;padding:16px 0;background:#222;color:#fff;position:fixed;bottom:0;left:0;z-index:1000;font-size:1.1em;letter-spacing:1px;display:none;">
+    &copy; 2026 Developed by Abdullah
+  </footer>
